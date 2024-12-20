@@ -55,4 +55,4 @@ Contributions are welcome! Please create an issue to discuss your ideas or submi
 ---
 
 ## License
-Specify the license if applicable (e.g., MIT, Apache).
+American International University Bangladesh
