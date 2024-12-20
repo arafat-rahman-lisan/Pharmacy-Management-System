@@ -1,0 +1,13 @@
+103,Robin,robin@gmail.com,015654889,male,26,Kuratoli-Dhaka,40%,non Regular
+105,ajgjayu,ahga,5648,Male,23,tafyu,40,Reguler
+258,ghfyt,jhghuy,45988,Male,78,78\8,56,non Reguler
+564,lisan,lisan@,01235,Male,233,asad,56%,Reguler
+801,Raj,raj@,15484,Male,21,jamun a,40,Reguler
+401,Diya,iytaui,4848,Male,21,wuwhu,10,Reguler
+302,ssd,aaa,5456,Male,455,asdd,30,Reguler
+852,Hamba,hama,1235,Male,21,sss,40,Reguler
+7070,tfyt,gvhg,1541,Male,32,jhjh,10,non Reguler
+2022,jhjh,hbhb,545,Male,21,jhb,20,Reguler
+5004,lkjlk,kjnjk,72,Male,45,kjhj,20,Reguler
+7896,jkn,j,24,Female,45,knl,10,Reguler
+1234556,jhghjhjug,hkjkj;ljlk,534354,Male,20,jyjhgjh,40,Reguler
