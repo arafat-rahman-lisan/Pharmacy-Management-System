@@ -14,9 +14,8 @@ A **Pharmacy Management System** developed in Java to streamline the operations 
 
 ## Technologies Used
 - **Programming Language:** Java
-- **Framework:** (Mention if you used one, e.g., Swing for GUI)
-- **Database (if applicable):** (e.g., MySQL, SQLite)
-- **Build Tool:** (e.g., Maven, Gradle)
+- **Framework:**  Swing for GUI
+- **Build Tool:** Notepad++
 
 ---
 
