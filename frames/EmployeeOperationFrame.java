@@ -44,7 +44,7 @@ public class EmployeeOperationFrame extends JFrame implements ActionListener
         Color c3 = new Color(51, 51, 255);  //blue
 		
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Sobar.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.CENTER);
 		background.setBounds(0,0,800,600);
 		panel.add(background);
@@ -116,7 +116,7 @@ public class EmployeeOperationFrame extends JFrame implements ActionListener
 		this.addressLabel=new JLabel("Current Address:");
 		this.addressLabel.setBounds(280,50,60,30);
 		this.addressLabel.setFont(font);
-		this.panel.add(addressLabel);
+		background.add(addressLabel);
 		
 		this.addressTF=new JTextField();
 		this.addressTF.setBounds(390,50,130,30);
@@ -220,7 +220,7 @@ public class EmployeeOperationFrame extends JFrame implements ActionListener
 		
 	
 
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		
 		this.u=u;
 		
@@ -458,13 +458,13 @@ public class EmployeeOperationFrame extends JFrame implements ActionListener
 		{
 			//back button will take you to Employee home page.
 			EmployeeHomeFrame ehf=new EmployeeHomeFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			ehf.setVisible(true);
 		}
 		if(command.equals(listBtn.getText()))
 		{
 			EmployeeListFrame elf=new EmployeeListFrame(u);
-			this.setVisible(false);
+			this.dispose();
 			elf.setVisible(true);
 		}
 	}

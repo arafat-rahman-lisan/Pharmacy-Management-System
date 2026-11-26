@@ -45,7 +45,7 @@ public class CustomerOperationFrame extends JFrame implements ActionListener
         Color c3 = new Color(51, 51, 255);  //blue
 		
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Operation.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.CENTER);
 		background.setBounds(0,0,800,600);
 		panel.add(background);
@@ -212,7 +212,7 @@ public class CustomerOperationFrame extends JFrame implements ActionListener
 		
 	
 
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		
 		this.u=u;
 		
@@ -443,13 +443,13 @@ public class CustomerOperationFrame extends JFrame implements ActionListener
 		{
 			//back button will take you to Owner home page.
 			OwnerHomeFrame ohf=new OwnerHomeFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			ohf.setVisible(true);
 		}
 		if(command.equals(listBtn.getText()))
 		{
 			CustomerListFrame elf=new CustomerListFrame(u);
-			this.setVisible(false);
+			this.dispose();
 			elf.setVisible(true);
 		}
 	}

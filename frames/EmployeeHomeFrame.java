@@ -28,7 +28,7 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
         Color c1 = new Color(0, 153, 153);
 
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Sobar.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.LEFT);
 		background.setBounds(0,0,1000,650);
 		panel.add(background);
@@ -78,7 +78,7 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
         this.backBtn.addActionListener(this);
 		background.add(backBtn);
         
-        this.add(panel);
+        PharmaUI.install(this, panel);
         this.u=u;
     }
     
@@ -89,7 +89,7 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
         if(command.equals(profileBtn.getText()))
 		{
 			EmployeeUpdateProfileFrame euf=new EmployeeUpdateProfileFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
             euf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			euf.setVisible(true);
 		}
@@ -98,7 +98,7 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
         if(command.equals(customerBtn.getText()))
         {
             CustomerOperationFrame2 quf=new CustomerOperationFrame2(this.u);
-			this.setVisible(false);
+			this.dispose();
             quf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			quf.setVisible(true);
         }
@@ -106,7 +106,7 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
         if(command.equals(passBtn.getText()))
 		{
 			EmployeeUpdatePasswordFrame edf=new EmployeeUpdatePasswordFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
             edf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			edf.setVisible(true);
 		}
@@ -116,14 +116,14 @@ public class EmployeeHomeFrame extends JFrame implements ActionListener {
 		{
 			//back button will take you to Login page.
 			LoginFrame ldf=new LoginFrame();
-			this.setVisible(false);
+			this.dispose();
 			ldf.setVisible(true);
 		}
 
         if (command.equals(medicineManagementBtn.getText()))
         {
             MedicineListFrame2 mdf=new MedicineListFrame2 (this.u);
-			this.setVisible(false);
+			this.dispose();
             mdf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			mdf.setVisible(true);
         }

@@ -28,7 +28,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
         Color c1 = new Color(0, 153, 153);
 
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Sobar.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.LEFT);
 		background.setBounds(0,0,1000,650);
 		panel.add(background);
@@ -71,7 +71,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
         this.backBtn.addActionListener(this);
         background.add(backBtn);
         
-        this.add(panel);
+        PharmaUI.install(this, panel);
         this.u=u;
     }
     
@@ -82,7 +82,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
         if(command.equals(profileBtn.getText()))
 		{
 			CustomerUpdateProfileFrame cuf=new CustomerUpdateProfileFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
             cuf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			cuf.setVisible(true);
 		}
@@ -90,7 +90,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
         if(command.equals(buyMedicineBtn.getText()))
 		{
 			CustomerBuyMedicineFrame cufm=new CustomerBuyMedicineFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
             cufm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			cufm.setVisible(true);
 		}
@@ -101,7 +101,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
         if(command.equals(passBtn.getText()))
 		{
 			CustomerUpdatePasswordFrame cdf=new CustomerUpdatePasswordFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
             cdf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Close only the dialog when closed
 			cdf.setVisible(true);
 		}
@@ -111,7 +111,7 @@ public class CustomerHomeFrame extends JFrame implements ActionListener {
 		{
 			//back button will take you to Login page.
 			LoginFrame ldf=new LoginFrame();
-			this.setVisible(false);
+			this.dispose();
 			ldf.setVisible(true);
 		}
     }

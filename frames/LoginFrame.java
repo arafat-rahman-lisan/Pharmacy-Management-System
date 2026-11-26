@@ -36,7 +36,7 @@ public class LoginFrame extends JFrame implements ActionListener
         Color c3 = new Color(51, 51, 255);  //blue
 		
 		JLabel background;
-		ImageIcon img = new ImageIcon("frames/Picture/Login3.png");
+		ImageIcon img = new ImageIcon();
 		background = new JLabel("", img, JLabel.LEFT);
 		background.setBounds(0, 0, 1000, 650);
 		panel.add(background);
@@ -79,7 +79,7 @@ public class LoginFrame extends JFrame implements ActionListener
 		this.backBtn.addActionListener(this);
 		background.add(backBtn);
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 	}
 	
 	public void actionPerformed(ActionEvent ae)
@@ -95,14 +95,14 @@ public class LoginFrame extends JFrame implements ActionListener
 		if(command.equals(forgetPassBtn.getText()))
 		{
 			ForgetPassFrame fpf = new ForgetPassFrame();
-			this.setVisible(false);
+			this.dispose();
 			fpf.setVisible(true);
 		}
 		
 		if(command.equals(backBtn.getText()))
 		{
 			EntryFrame edf = new EntryFrame();
-			this.setVisible(false);
+			this.dispose();
 			edf.setVisible(true);
 		}
 	}
@@ -110,8 +110,8 @@ public class LoginFrame extends JFrame implements ActionListener
 	// Separate login logic into its own method for clarity
 	private void performLogin()
 	{
-		String uId = userTF.getText();
-		String pass = passPF.getText();
+		String uId = userTF.getText().trim();
+		String pass = new String(passPF.getPassword());
 		UserRepo urp = new UserRepo();
 		User user = urp.searchUserByUserId(uId);
 
@@ -122,19 +122,19 @@ public class LoginFrame extends JFrame implements ActionListener
 				if(user.getRole() == 1)
 				{
 					OwnerHomeFrame ohf = new OwnerHomeFrame(user);
-					this.setVisible(false);
+					this.dispose();
 					ohf.setVisible(true);
 				}
 				else if(user.getRole() == 2)
 				{
 					EmployeeHomeFrame ehf = new EmployeeHomeFrame(user);
-					this.setVisible(false);
+					this.dispose();
 					ehf.setVisible(true);
 				}
 				else if(user.getRole() == 3)
 				{
 					CustomerHomeFrame ahf = new CustomerHomeFrame(user);
-					this.setVisible(false);
+					this.dispose();
 					ahf.setVisible(true);
 				}
 			}

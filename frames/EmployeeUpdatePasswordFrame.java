@@ -34,7 +34,7 @@ public class EmployeeUpdatePasswordFrame extends JFrame implements ActionListene
 		Color c1 = new Color(0, 153, 153);
 
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Operation.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.LEFT);
 		background.setBounds(0,0,1000,650);
 		panel.add(background);
@@ -86,7 +86,7 @@ public class EmployeeUpdatePasswordFrame extends JFrame implements ActionListene
 		
 		
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		
 		this.u=u;
 		
@@ -136,7 +136,7 @@ public class EmployeeUpdatePasswordFrame extends JFrame implements ActionListene
 		{
 			//back button will take you to admin home page.
 			EmployeeHomeFrame edf=new EmployeeHomeFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			edf.setVisible(true);
 		}
 	}

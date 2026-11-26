@@ -33,7 +33,7 @@ public class ForgetPassFrame extends JFrame implements ActionListener
 		Color c1 = new Color(0, 153, 153);
 
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Operation.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.LEFT);
 		background.setBounds(0,0,1000,650);
 		panel.add(background);
@@ -85,7 +85,7 @@ public class ForgetPassFrame extends JFrame implements ActionListener
 		background.add(backBtn);
 		
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 	}
 	
 	public void actionPerformed(ActionEvent ae)
@@ -131,7 +131,7 @@ public class ForgetPassFrame extends JFrame implements ActionListener
 		if(command.equals(backBtn.getText()))
 		{
 			LoginFrame lf=new LoginFrame();
-			this.setVisible(false);
+			this.dispose();
 			lf.setVisible(true);
 		}
 		

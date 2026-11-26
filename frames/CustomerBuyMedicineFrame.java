@@ -104,7 +104,7 @@ public class CustomerBuyMedicineFrame extends JFrame implements ActionListener {
         scroll.setSize(850, 600);
 
         this.panel.add(scroll);
-        this.add(panel);
+        PharmaUI.install(this, panel);
         this.u = u;
     }
 
@@ -138,7 +138,7 @@ public class CustomerBuyMedicineFrame extends JFrame implements ActionListener {
 			if(mPrice != 0)
 			{
             BuyFrame bf = new BuyFrame(this.u, mPrice);
-            this.setVisible(false);
+            this.dispose();
             bf.setVisible(true);
 			}
 		 }
@@ -151,7 +151,7 @@ public class CustomerBuyMedicineFrame extends JFrame implements ActionListener {
         
 			//back button will take you to Medicine home page.
 			CustomerHomeFrame cmhf=new CustomerHomeFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			cmhf.setVisible(true);
 
         }

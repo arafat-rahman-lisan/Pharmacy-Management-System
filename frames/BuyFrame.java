@@ -74,7 +74,7 @@ public class BuyFrame extends JFrame implements ActionListener
         this.panel.add(backBtn);
 		
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
         this.u = u;
 	}
 	public void actionPerformed(ActionEvent ae)
@@ -102,7 +102,7 @@ public class BuyFrame extends JFrame implements ActionListener
 		if(command.equals(lBtn.getText()))
 		{
 			CustomerSelfPaymentListFrame cpf = new CustomerSelfPaymentListFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			cpf.setVisible(true);
 		}
 		
@@ -111,7 +111,7 @@ public class BuyFrame extends JFrame implements ActionListener
 		{
 			//back button will take you to Medicine home page.
 			CustomerBuyMedicineFrame  ohf=new CustomerBuyMedicineFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			ohf.setVisible(true);
 		}
 	}

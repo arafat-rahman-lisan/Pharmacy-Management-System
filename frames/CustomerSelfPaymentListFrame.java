@@ -66,7 +66,7 @@ public class CustomerSelfPaymentListFrame extends JFrame implements ActionListen
 		this.panel.revalidate();
 		this.panel.repaint();
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		
 		this.u=u;
 		
@@ -84,7 +84,7 @@ public class CustomerSelfPaymentListFrame extends JFrame implements ActionListen
 		{
 			//back button will take you to payment home page.
 			BuyFrame f=new BuyFrame(this.u,0);
-			this.setVisible(false);
+			this.dispose();
 			f.setVisible(true);
 		}
 	}

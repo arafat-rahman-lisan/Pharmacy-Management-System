@@ -36,7 +36,7 @@ public class EmployeeListFrame extends JFrame implements ActionListener
         Color c3 = new Color(51, 51, 255);  //blue
 		
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Operation.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.CENTER);
 		background.setBounds(0,0,800,600);
 		panel.add(background);
@@ -89,7 +89,7 @@ public class EmployeeListFrame extends JFrame implements ActionListener
 		this.panel.revalidate();
 		this.panel.repaint();
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		
 		this.u=u;
 		
@@ -101,7 +101,7 @@ public class EmployeeListFrame extends JFrame implements ActionListener
 		if(command.equals(backBtn.getText()))
 		{
 			EmployeeOperationFrame eof=new EmployeeOperationFrame(u);
-			this.setVisible(false);
+			this.dispose();
 			eof.setVisible(true);
 			
 		}

@@ -37,7 +37,7 @@ public class OwnerHomeFrame extends JFrame implements ActionListener
         Color c3 = new Color(51, 51, 255);  //blue
 		
 		JLabel background;
-		ImageIcon img= new ImageIcon("frames/Picture/Entry.png");
+		ImageIcon img = new ImageIcon();
 		background=new JLabel("",img,JLabel.LEFT);
 		background.setBounds(0,0,800,400);
 		panel.add(background);
@@ -118,7 +118,7 @@ public class OwnerHomeFrame extends JFrame implements ActionListener
 		
 		
 		
-		this.add(panel);
+		PharmaUI.install(this, panel);
 		this.u=u;
 	}
 
@@ -129,59 +129,59 @@ public class OwnerHomeFrame extends JFrame implements ActionListener
 		if(command.equals(ownerBtn.getText()))
 		{
 			OwnerOperationFrame f=new OwnerOperationFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			f.setVisible(true);
 		}
 		
 		if(command.equals(paymentBtn.getText()))
 		{
 			OwnerAllPayment Oof=new OwnerAllPayment(this.u);
-			this.setVisible(false);
+			this.dispose();
 			Oof.setVisible(true);
 		}
 		
 		if(command.equals(profileBtn.getText()))
 		{
 			OwnerUpdateProfileFrame Oof=new OwnerUpdateProfileFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			Oof.setVisible(true);
 		}
 		
 		if(command.equals(passBtn.getText()))
 		{
 			OwnerUpdatePasswordFrame Oof=new OwnerUpdatePasswordFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			Oof.setVisible(true);
 		}
 		if(command.equals(offermedicineListBtn.getText()))
 		{
 			MedicineListFrame mlf=new MedicineListFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			mlf.setVisible(true);
 		}
 		if(command.equals(orderList.getText()))
 		{
 			OrderListFrame olf=new OrderListFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			olf.setVisible(true);
 		}
 		
 	    if(command.equals(orderLineBtn.getText()))
 		{
 			OrderLineListFrame ollf=new OrderLineListFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			ollf.setVisible(true);
 		}    
 		if(command.equals(employeeBtn.getText()))
 		{
 			EmployeeOperationFrame eof=new EmployeeOperationFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			eof.setVisible(true);
 		}
 		if(command.equals(customerBtn.getText()))
 		{
 			CustomerOperationFrame cof=new CustomerOperationFrame(this.u);
-			this.setVisible(false);
+			this.dispose();
 			cof.setVisible(true);
 		}
 
@@ -189,7 +189,7 @@ public class OwnerHomeFrame extends JFrame implements ActionListener
 		{
 			//back button will take you to Login page.
 			LoginFrame ldf=new LoginFrame();
-			this.setVisible(false);
+			this.dispose();
 			ldf.setVisible(true);
 		}
 		
